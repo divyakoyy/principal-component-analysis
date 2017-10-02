@@ -10,14 +10,20 @@ images = double(images);
 
 %imageArray = arrayfun(@(x) x(:),images(1,:,:));
 arraySize = [m, n];
-imageArray = reshape(images, arraySize);
+A = reshape(images, arraySize);
 
-images(:, 1:2, 1)
-imageArray(1:56, 1, 1)
+%images(:, 1:2, 1)
+%imageArray(1:56, 1, 1)
 
-mu = A*ones(n)/n;
-Ac = A - mu*(ones(n)');
+mu = A*ones(n,1)/n;
+Ac = A - mu*(ones(1,n));
+[U, S, V] = svd(Ac);
+U = U(:, 1:k);
+s = diag(S)/(sqrt(n-1));
 
+code.mu = mu;
+code.U = U;
+code.size = [size(images, 1), size(images, 2)];
 
 end
 

@@ -15,10 +15,11 @@ A = reshape(images, arraySize);
 %images(:, 1:2, 1)
 %imageArray(1:56, 1, 1)
 
-mu = A*ones(n)/n;
-Ac = A - mu*(ones(n)');
-[U, S, V] = svd(Ac);
+mu = A*ones(n,1)/n;
+Ac = A - mu*(ones(1,n));
+[U, S, V] = svd(Ac, 'econ');
 U = U(:, 1:k);
+
 s = diag(S)/(sqrt(n-1));
 
 code.mu = mu;
