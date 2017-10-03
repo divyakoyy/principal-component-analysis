@@ -1,6 +1,6 @@
 function p = variancePercentage(s)
-    s = s.*s;
-    sum_s = sum(s);
-    s = 100*(s/sum_s);
-    p = cumsum(s);
+    v = s.*s;
+    tot = sum(v);
+    v = v/tot;
+    p = 100*cumsum(v);
 end
