@@ -10,6 +10,10 @@ end
 
 arraySize = [dim(1)*dim(2), index3];
 Ic = double(reshape(I, arraySize));
-C = (code.U)'*(Ic - code.mu*ones(1,index3));
+
+mu = code.mu;
+Ic = Ic - mu*ones(1,index3);
+U = code.U;
+C = U' * Ic;
 end
 

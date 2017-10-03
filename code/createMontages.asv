@@ -1,0 +1,16 @@
+
+imTable = zeros(28, 28, 1, 30);
+
+for i = 0:9
+    imageSubset = data.image(:,:,data.label == i);
+    image = imageSubset(:,:,1);
+    
+    encoded1 = encode(image, cAll);
+    encoded2 = encode(image, digitCodes(i+1));
+    
+    decoded1 = decode(encoded1, cAll);
+    decoded2 = decode(encoded2, digitCodes(i+1));
+    
+    figure;
+    montage(image, decoded1, decoded2);
+end
