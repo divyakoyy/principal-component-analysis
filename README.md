@@ -12,13 +12,13 @@ I developed a coder that can transform an image I into its compressed image C vi
 
 ### Percentage of total data variance preserved
 k (# principal components) vs. percentage of total data variance preserved
-![percent_variance_all_digits](graphs/percent_varaince_all_digits.PNG)
+![percent_variance_all_digits](graphs/percent_variance_all_digits.PNG)
 
 ### Digit Encoding and Decoding
 each digit (col 0) with encoding then decoding:
 * column 1: for all digits 
 * column 2: digit-specific encoding 
 
-![percent_varaince_all_digits](graphs/encode_decode_digits.PNG)
+![percent_varaince_all_digits](graphs/encode_decode_digits.png)
 
 
