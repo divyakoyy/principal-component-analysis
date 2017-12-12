@@ -11,8 +11,8 @@ I developed a coder that can transform an image I into its compressed image C vi
 ## Results
 
 ### Percentage of total data variance preserved
-k (# principal components) vs. percentage of total data variance preserved
-![percent_variance_all_digits](graphs/percent_variance_all_digits.PNG)
+k (# principal components) vs. percentage of total data variance preserved. Legend shows line for each digit, 
+![percent_variance_all_digits](graphs/percent_variance_each_digit.PNG)
 
 ### Digit Encoding and Decoding
 each digit (col 0) with encoding then decoding:
