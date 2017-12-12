@@ -19,6 +19,6 @@ each digit (col 0) with encoding then decoding:
 * column 1: for all digits 
 * column 2: digit-specific encoding 
 
-![encode_decode_digits](graphs/encode_decode_digits.png)
+![encode_decode_digits](graphs/encode_decode.png)
 
 
